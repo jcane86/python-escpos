@@ -70,8 +70,8 @@ class Escpos:
       			   	self.device.detach_kernel_driver(0)
       		   	except usb.core.USBError as e:
       			   	print "Could not detatch kernel driver: %s" % str(e)
- 	except NotImplementedError as e:
-         	print "Could not detatch kernel driver: %s" % str(e)
+ 	except:
+         	print "Could not detatch kernel driver"
 
       	try:
       		self.device.set_configuration()
