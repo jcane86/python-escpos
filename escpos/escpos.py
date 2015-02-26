@@ -8,7 +8,10 @@
 
 import usb.core
 import usb.util
-import Image
+try:
+    import Image
+except ImportError:
+    from PIL import Image
 import time
 
 from constants import *
